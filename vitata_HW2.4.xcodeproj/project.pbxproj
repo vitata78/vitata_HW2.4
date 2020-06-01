@@ -9,21 +9,27 @@
 /* Begin PBXBuildFile section */
 		2980B55B2484A24E00443272 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2980B55A2484A24E00443272 /* AppDelegate.swift */; };
 		2980B55D2484A24E00443272 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2980B55C2484A24E00443272 /* SceneDelegate.swift */; };
-		2980B55F2484A24E00443272 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2980B55E2484A24E00443272 /* ViewController.swift */; };
+		2980B55F2484A24E00443272 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2980B55E2484A24E00443272 /* LoginViewController.swift */; };
 		2980B5622484A24E00443272 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2980B5602484A24E00443272 /* Main.storyboard */; };
 		2980B5642484A25400443272 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2980B5632484A25400443272 /* Assets.xcassets */; };
 		2980B5672484A25400443272 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2980B5652484A25400443272 /* LaunchScreen.storyboard */; };
+		2980B5742484AE5A00443272 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2980B5732484AE5A00443272 /* User.swift */; };
+		2980B5762484B58B00443272 /* TabOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2980B5752484B58B00443272 /* TabOneViewController.swift */; };
+		2980B5782484B5C800443272 /* TabTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2980B5772484B5C800443272 /* TabTwoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2980B5572484A24E00443272 /* vitata_HW2.4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = vitata_HW2.4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2980B55A2484A24E00443272 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2980B55C2484A24E00443272 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2980B55E2484A24E00443272 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2980B55E2484A24E00443272 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2980B5612484A24E00443272 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2980B5632484A25400443272 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2980B5662484A25400443272 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2980B5682484A25500443272 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2980B5732484AE5A00443272 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		2980B5752484B58B00443272 /* TabOneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabOneViewController.swift; sourceTree = "<group>"; };
+		2980B5772484B5C800443272 /* TabTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabTwoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +62,58 @@
 		2980B5592484A24E00443272 /* vitata_HW2.4 */ = {
 			isa = PBXGroup;
 			children = (
-				2980B55A2484A24E00443272 /* AppDelegate.swift */,
-				2980B55C2484A24E00443272 /* SceneDelegate.swift */,
-				2980B55E2484A24E00443272 /* ViewController.swift */,
-				2980B5602484A24E00443272 /* Main.storyboard */,
-				2980B5632484A25400443272 /* Assets.xcassets */,
-				2980B5652484A25400443272 /* LaunchScreen.storyboard */,
-				2980B5682484A25500443272 /* Info.plist */,
+				2980B5712484A49200443272 /* ViewControllers */,
+				2980B5722484AE3900443272 /* Models */,
+				2980B5702484A47200443272 /* Storyboards */,
+				2980B56E2484A40A00443272 /* SupportingFiles */,
+				2980B56F2484A46200443272 /* Sources */,
 			);
 			path = vitata_HW2.4;
+			sourceTree = "<group>";
+		};
+		2980B56E2484A40A00443272 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				2980B55A2484A24E00443272 /* AppDelegate.swift */,
+				2980B55C2484A24E00443272 /* SceneDelegate.swift */,
+				2980B5682484A25500443272 /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		2980B56F2484A46200443272 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				2980B5632484A25400443272 /* Assets.xcassets */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		2980B5702484A47200443272 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				2980B5602484A24E00443272 /* Main.storyboard */,
+				2980B5652484A25400443272 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		2980B5712484A49200443272 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				2980B55E2484A24E00443272 /* LoginViewController.swift */,
+				2980B5752484B58B00443272 /* TabOneViewController.swift */,
+				2980B5772484B5C800443272 /* TabTwoViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		2980B5722484AE3900443272 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2980B5732484AE5A00443272 /* User.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +187,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2980B55F2484A24E00443272 /* ViewController.swift in Sources */,
+				2980B5742484AE5A00443272 /* User.swift in Sources */,
+				2980B5762484B58B00443272 /* TabOneViewController.swift in Sources */,
+				2980B55F2484A24E00443272 /* LoginViewController.swift in Sources */,
 				2980B55B2484A24E00443272 /* AppDelegate.swift in Sources */,
 				2980B55D2484A24E00443272 /* SceneDelegate.swift in Sources */,
+				2980B5782484B5C800443272 /* TabTwoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,7 +338,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8U5V38UREF;
-				INFOPLIST_FILE = vitata_HW2.4/Info.plist;
+				INFOPLIST_FILE = vitata_HW2.4/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -294,7 +346,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "apnet.vitata-HW2-4";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -304,7 +356,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8U5V38UREF;
-				INFOPLIST_FILE = vitata_HW2.4/Info.plist;
+				INFOPLIST_FILE = vitata_HW2.4/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -312,7 +364,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "apnet.vitata-HW2-4";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
