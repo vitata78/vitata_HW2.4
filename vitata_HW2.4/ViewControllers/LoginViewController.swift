@@ -13,11 +13,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var loginTextField: UITextField!
     
     @IBOutlet weak var passwordTextField: UITextField!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
+
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super .touchesBegan(touches, with: event)
@@ -32,7 +28,19 @@ class LoginViewController: UIViewController {
         destinationVC.welcomeText = "Welcome, \(loginTextField.text ?? "Welcome, Anonymous")"
     }
     
+    
+    private func showAlert(title: String, message: String) {
+        let myAlert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+        
+        myAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action: UIAlertAction!) in
+            myAlert.dismiss(animated: true, completion: nil)
+        }))
+        
+        present(myAlert, animated: true, completion: nil)
+    }
+    
     @IBAction func unwindSegue(segue: UIStoryboardSegue) {
+        guard segue.identifier == "unwindSegue" else { return }
         loginTextField.text = ""
         passwordTextField.text = ""
     }
@@ -41,15 +49,18 @@ class LoginViewController: UIViewController {
         if loginTextField.text == User.getLogin() && passwordTextField.text == User.getPassword() {
             performSegue(withIdentifier: "login", sender: nil)
         } else {
-            
+            showAlert(title: "Error", message: "Wrong credenials, try again")
+            passwordTextField.text = ""
         }
         
     }
     
     @IBAction func forgotLogin() {
+        showAlert(title: "Oops", message: "Login is Andrew")
     }
     
     @IBAction func forgotPassword() {
+        showAlert(title: "Oops", message: "Password is 111")
     }
     
 }

@@ -102,7 +102,7 @@
                                         <rect key="frame" x="65" y="47" width="52" height="30"/>
                                         <state key="normal" title="Log out"/>
                                         <connections>
-                                            <segue destination="8Xm-1R-KfP" kind="unwind" unwindAction="unwindSegueWithSegue:" id="kVD-4w-J5p"/>
+                                            <action selector="logOut" destination="KEx-cw-GyE" eventType="touchUpInside" id="96b-c7-YzJ"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -118,6 +118,7 @@
                     <tabBarItem key="tabBarItem" title="" image="sun.max.fill" catalog="system" id="ZCj-uU-RzF"/>
                     <connections>
                         <outlet property="welcomeLabel" destination="fxf-2O-iRO" id="QS3-5c-cJn"/>
+                        <segue destination="8Xm-1R-KfP" kind="unwind" identifier="unwindSegue" unwindAction="unwindSegueWithSegue:" id="b5z-xd-74f"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oto-KI-bTy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -134,16 +135,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="34" translatesAutoresizingMaskIntoConstraints="NO" id="cZb-p0-aIB">
-                                <rect key="frame" x="117.5" y="232" width="85" height="84.5"/>
+                                <rect key="frame" x="16" y="171" width="288" height="206.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dvP-Yu-qzk">
-                                        <rect key="frame" x="19.5" y="0.0" width="46.5" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dvP-Yu-qzk">
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="142.5"/>
+                                        <string key="text">Меня зовут Андрей Толстов, мне 41 год, женат, трое детей.
+Выходные провел с семьей, поэтому делаю все в последний момент -) 
+в частности поэтому не доделал клавиатуру(</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zyd-aU-7NP">
-                                        <rect key="frame" x="0.0" y="54.5" width="85" height="30"/>
+                                        <rect key="frame" x="101.5" y="176.5" width="85" height="30"/>
                                         <state key="normal" title="More details"/>
                                         <connections>
                                             <segue destination="wtx-ZT-TrR" kind="show" id="VTN-z8-7Go"/>
@@ -155,7 +159,8 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="cZb-p0-aIB" firstAttribute="centerY" secondItem="GNy-8v-98j" secondAttribute="centerY" id="EMV-08-RWl"/>
-                            <constraint firstItem="cZb-p0-aIB" firstAttribute="centerX" secondItem="GNy-8v-98j" secondAttribute="centerX" id="h6G-6l-mSS"/>
+                            <constraint firstItem="cZb-p0-aIB" firstAttribute="leading" secondItem="GNy-8v-98j" secondAttribute="leading" constant="16" id="cC0-ZJ-7vm"/>
+                            <constraint firstAttribute="trailing" secondItem="cZb-p0-aIB" secondAttribute="trailing" constant="16" id="gsm-wf-Ylg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="185-QC-PoK"/>
                     </view>
@@ -173,8 +178,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Details go here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RCM-Om-xr7">
-                                <rect key="frame" x="102.5" y="263.5" width="115" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RCM-Om-xr7">
+                                <rect key="frame" x="16" y="172.5" width="288" height="203"/>
+                                <mutableString key="text">Давным-давно я увлекался action script в Macromedia Flash и с тех пор у меня осталась симпатия к программированию.
+Сейчас я управляю компанией по разработке софта, в частности и iOS приложений, изучаю программирование как хобби для себя + для быстрой проверки продуктов</mutableString>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -182,7 +189,8 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="RCM-Om-xr7" firstAttribute="centerX" secondItem="dvH-kp-Fha" secondAttribute="centerX" id="nnn-CH-99Q"/>
+                            <constraint firstAttribute="trailing" secondItem="RCM-Om-xr7" secondAttribute="trailing" constant="16" id="62Z-JY-T7z"/>
+                            <constraint firstItem="RCM-Om-xr7" firstAttribute="leading" secondItem="dvH-kp-Fha" secondAttribute="leading" constant="16" id="hJi-lW-Pe7"/>
                             <constraint firstItem="RCM-Om-xr7" firstAttribute="centerY" secondItem="dvH-kp-Fha" secondAttribute="centerY" id="osc-Bi-0Wp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Bwv-uI-eQG"/>
